@@ -18,11 +18,9 @@ namespace NotificationService.Api.Mappings
             {
                 Id = src.Id.Value.ToString(),
                 RecipientId = src.Recipient.RecipientId,
-                Email = src.Recipient.Email?.Value,
-                PhoneNumber = src.Recipient.PhoneNumber?.Value,
+                Email = src.Recipient.Email.Value,
                 MessageSubject = src.MessageSubject.Value,
                 MessageBody = src.MessageBody.Value,
-                NotificationType = src.NotificationType.ToString(),
                 Status = src.Status.ToString(),
                 FailureReason = src.FailureReason,
                 CreatedAt = src.CreatedAt,

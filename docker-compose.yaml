@@ -1,0 +1,40 @@
+services:
+  notification-service:
+    build:
+      context: .
+      dockerfile: NotificationService.Api/Dockerfile
+    container_name: notification-service
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__NotificationDB: "Server=postgrespull-db-1;Port=5432;Database=notification;Username=myuser;Password=example;"
+      Smtp__Host: smtp.gmail.com
+      Smtp__Port: "587"
+      Smtp__UseStartTls: "true"
+      Smtp__Username: ${SMTP_USERNAME}
+      Smtp__Password: ${SMTP_PASSWORD}
+      Smtp__FromAddress: ${SMTP_FROM_ADDRESS}
+      Smtp__FromName: Notification Service
+    depends_on:
+      - smtp4dev
+    networks:
+      - postgrespull_default
+      - notification_default
+
+  smtp4dev:
+    image: rnwood/smtp4dev:latest
+    container_name: smtp4dev
+    restart: unless-stopped
+    ports:
+      - "3000:80"   # web UI: http://localhost:3000
+      - "2525:25"   # optional: send mail from host on localhost:2525
+    networks:
+      - notification_default
+
+networks:
+  postgrespull_default:
+    external: true
+  notification_default:
+    driver: bridge

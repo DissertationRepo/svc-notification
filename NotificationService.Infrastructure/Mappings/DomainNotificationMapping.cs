@@ -18,8 +18,8 @@ namespace NotificationService.Infrastructure.Mappings
             {
                 Id = src.Id.Value,
                 RecipientId = src.Recipient.RecipientId,
-                Email = src.Recipient.Email?.Value,
-                Phone = src.Recipient.PhoneNumber?.Value,
+                Email = src.Recipient.Email.Value,
+                Phone = null,
                 MessageSubject = src.MessageSubject.Value,
                 MessageBody = src.MessageBody.Value,
                 NotificationType = (int)src.NotificationType,

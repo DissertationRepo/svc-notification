@@ -15,10 +15,8 @@ namespace NotificationService.Infrastructure
             services.AddScoped<INotificationService, Application.Services.NotificationService>();
 
             services.Configure<SmtpSettings>(configuration.GetSection("Smtp"));
-            services.Configure<TwilioSettings>(configuration.GetSection("Twilio"));
 
             services.AddScoped<INotificationSender, EmailNotificationSender>();
-            services.AddScoped<INotificationSender, SmsNotificationSender>();
 
             services.Configure<KafkaSettings>(configuration.GetSection("Kafka"));
             services.AddHostedService<MessageSentKafkaConsumer>();

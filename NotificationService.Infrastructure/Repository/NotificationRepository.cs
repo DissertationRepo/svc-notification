@@ -61,9 +61,12 @@ namespace NotificationService.Infrastructure.Repository
 
         private static Notification MapToDomain(NotificationEntity entity)
         {
-            var email = string.IsNullOrWhiteSpace(entity.Email) ? null : new Email(entity.Email!);
-            var phone = string.IsNullOrWhiteSpace(entity.Phone) ? null : new PhoneNumber(entity.Phone!);
-            var recipient = new Recipient(entity.RecipientId, email, phone);
+            if (string.IsNullOrWhiteSpace(entity.Email))
+            {
+                throw new InvalidOperationException($"Notification {entity.Id} is missing an email address.");
+            }
+
+            var recipient = new Recipient(entity.RecipientId, new Email(entity.Email!));
 
             return Notification.Load(
                 new NotificationId(entity.Id),

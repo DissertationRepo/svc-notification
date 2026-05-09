@@ -9,6 +9,5 @@ namespace NotificationService.Application.Models
         public DateTime Timestamp { get; init; }
         public ICollection<string> RecipientIds { get; init; } = new List<string>();
         public string? Email { get; init; }
-        public string? PhoneNumber { get; init; }
     }
 }

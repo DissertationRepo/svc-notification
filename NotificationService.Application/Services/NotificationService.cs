@@ -8,15 +8,21 @@ namespace NotificationService.Application.Services
     public class NotificationService : INotificationService
     {
         private readonly INotificationRepository _notificationRepository;
-        private readonly IReadOnlyDictionary<Domain.ValueObjects.NotificationType, INotificationSender> _sendersByChannel;
+        private readonly INotificationSender _emailSender;
 
         public NotificationService(
             INotificationRepository notificationRepository,
             IEnumerable<INotificationSender> senders)
         {
             _notificationRepository = notificationRepository ?? throw new ArgumentNullException(nameof(notificationRepository));
-            _sendersByChannel = senders?.ToDictionary(s => s.Channel)
-                ?? throw new ArgumentNullException(nameof(senders));
+
+            if (senders is null)
+            {
+                throw new ArgumentNullException(nameof(senders));
+            }
+
+            _emailSender = senders.FirstOrDefault(s => s.Channel == Domain.ValueObjects.NotificationType.Email)
+                ?? throw new InvalidOperationException("No email notification sender is registered.");
         }
 
         public async Task<Notification> CreateAndSendAsync(NotificationModel notification, CancellationToken cancellationToken = default)
@@ -39,12 +45,13 @@ namespace NotificationService.Application.Services
                 throw new ArgumentNullException(nameof(message));
             }
 
+            if (string.IsNullOrWhiteSpace(message.Email))
+            {
+                return;
+            }
+
             var subject = $"New message in conversation {message.ConversationId}";
             var body = $"From {message.SenderId} at {message.Timestamp:u}:{Environment.NewLine}{message.Content}";
-
-            var channel = !string.IsNullOrWhiteSpace(message.Email)
-                ? Domain.ValueObjects.NotificationType.Email
-                : Domain.ValueObjects.NotificationType.Sms;
 
             foreach (var recipientId in message.RecipientIds)
             {
@@ -57,10 +64,8 @@ namespace NotificationService.Application.Services
                 {
                     RecipientId = recipientId,
                     Email = message.Email,
-                    PhoneNumber = message.PhoneNumber,
                     MessageSubject = subject,
-                    MessageBody = body,
-                    NotificationType = channel.ToString()
+                    MessageBody = body
                 };
 
                 await CreateAndSendAsync(model, cancellationToken);
@@ -69,16 +74,9 @@ namespace NotificationService.Application.Services
 
         private async Task DispatchAsync(Notification notification, CancellationToken cancellationToken)
         {
-            if (!_sendersByChannel.TryGetValue(notification.NotificationType, out var sender))
-            {
-                notification.MarkAsFailed($"No sender registered for channel '{notification.NotificationType}'.");
-                await _notificationRepository.UpdateNotification(notification);
-                return;
-            }
-
             try
             {
-                await sender.SendAsync(notification, cancellationToken);
+                await _emailSender.SendAsync(notification, cancellationToken);
                 notification.MarkAsSent();
             }
             catch (Exception ex)
@@ -96,19 +94,16 @@ namespace NotificationService.Application.Services
                 throw new ArgumentNullException(nameof(model));
             }
 
-            if (!Enum.TryParse<Domain.ValueObjects.NotificationType>(model.NotificationType, ignoreCase: true, out var type))
+            if (string.IsNullOrWhiteSpace(model.Email))
             {
-                throw new ArgumentException($"Unknown notification type '{model.NotificationType}'.", nameof(model));
+                throw new ArgumentException("Email is required.", nameof(model));
             }
 
-            var email = string.IsNullOrWhiteSpace(model.Email) ? null : new Email(model.Email!);
-            var phone = string.IsNullOrWhiteSpace(model.PhoneNumber) ? null : new PhoneNumber(model.PhoneNumber!);
-
-            var recipient = new Recipient(model.RecipientId!, email, phone);
+            var recipient = new Recipient(model.RecipientId!, new Email(model.Email!));
             var subject = new MessageSubject(model.MessageSubject!);
             var body = new MessageBody(model.MessageBody!);
 
-            return Notification.Create(recipient, subject, body, type);
+            return Notification.Create(recipient, subject, body, Domain.ValueObjects.NotificationType.Email);
         }
     }
 }

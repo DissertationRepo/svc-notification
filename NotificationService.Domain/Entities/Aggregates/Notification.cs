@@ -94,12 +94,9 @@ public sealed class Notification
 
     private void EnsureChannelMatchesRecipient()
     {
-        switch (NotificationType)
+        if (NotificationType == NotificationType.Email && Recipient.Email is null)
         {
-            case NotificationType.Email when Recipient.Email is null:
-                throw new InvalidOperationException("An email recipient address is required for email notifications.");
-            case NotificationType.Sms when Recipient.PhoneNumber is null:
-                throw new InvalidOperationException("A recipient phone number is required for SMS notifications.");
+            throw new InvalidOperationException("An email recipient address is required for email notifications.");
         }
     }
 }

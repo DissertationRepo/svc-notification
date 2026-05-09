@@ -13,10 +13,8 @@ namespace NotificationService.Api.Mappings
                 {
                     RecipientId = src.RecipientId,
                     Email = src.Email,
-                    PhoneNumber = src.PhoneNumber,
                     MessageSubject = src.MessageSubject,
-                    MessageBody = src.MessageBody,
-                    NotificationType = src.NotificationType
+                    MessageBody = src.MessageBody
                 });
         }
     }
