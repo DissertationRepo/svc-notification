@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9851FC7C-E155-4CBB-B119-EA120A0F1F1B}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\lfodor\\onedrive - endava\\documents\\dissertationrepo\\svc-notification\\notificationservice.infrastructure\\senders\\emailnotificationsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9851FC7C-E155-4CBB-B119-EA120A0F1F1B}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\senders\\emailnotificationsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9851FC7C-E155-4CBB-B119-EA120A0F1F1B}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|c:\\users\\lfodor\\onedrive - endava\\documents\\dissertationrepo\\svc-notification\\notificationservice.infrastructure\\senders\\smsnotificationsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9851FC7C-E155-4CBB-B119-EA120A0F1F1B}|NotificationService.Infrastructure\\NotificationService.Infrastructure.csproj|solutionrelative:notificationservice.infrastructure\\senders\\smsnotificationsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C0C0D3A-0EE3-4EC9-A74C-EEA4A0665253}|NotificationService.Domain\\NotificationService.Domain.csproj|c:\\users\\lfodor\\onedrive - endava\\documents\\dissertationrepo\\svc-notification\\notificationservice.domain\\valueobjects\\phonenumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C0C0D3A-0EE3-4EC9-A74C-EEA4A0665253}|NotificationService.Domain\\NotificationService.Domain.csproj|solutionrelative:notificationservice.domain\\valueobjects\\phonenumber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Infrastructure\\Migrations\\20260509081240_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:NotificationService.Infrastructure\\Migrations\\20260509081240_InitialMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA36A7F8-383D-456D-BFD8-F6BC8919B4D3}|NotificationService.Api\\NotificationService.Api.csproj|c:\\users\\lfodor\\onedrive - endava\\documents\\dissertationrepo\\svc-notification\\notificationservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BA36A7F8-383D-456D-BFD8-F6BC8919B4D3}|NotificationService.Api\\NotificationService.Api.csproj|solutionrelative:notificationservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA36A7F8-383D-456D-BFD8-F6BC8919B4D3}|NotificationService.Api\\NotificationService.Api.csproj|c:\\users\\lfodor\\onedrive - endava\\documents\\dissertationrepo\\svc-notification\\notificationservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA36A7F8-383D-456D-BFD8-F6BC8919B4D3}|NotificationService.Api\\NotificationService.Api.csproj|solutionrelative:notificationservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA36A7F8-383D-456D-BFD8-F6BC8919B4D3}|NotificationService.Api\\NotificationService.Api.csproj|c:\\users\\lfodor\\onedrive - endava\\documents\\dissertationrepo\\svc-notification\\notificationservice.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA36A7F8-383D-456D-BFD8-F6BC8919B4D3}|NotificationService.Api\\NotificationService.Api.csproj|solutionrelative:notificationservice.api\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA36A7F8-383D-456D-BFD8-F6BC8919B4D3}|NotificationService.Api\\NotificationService.Api.csproj|c:\\users\\lfodor\\onedrive - endava\\documents\\dissertationrepo\\svc-notification\\notificationservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BA36A7F8-383D-456D-BFD8-F6BC8919B4D3}|NotificationService.Api\\NotificationService.Api.csproj|solutionrelative:notificationservice.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +42,115 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmailNotificationSender.cs",
+              "DocumentMoniker": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Infrastructure\\Senders\\EmailNotificationSender.cs",
+              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Senders\\EmailNotificationSender.cs",
+              "ToolTip": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Infrastructure\\Senders\\EmailNotificationSender.cs",
+              "RelativeToolTip": "NotificationService.Infrastructure\\Senders\\EmailNotificationSender.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T08:15:53.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PhoneNumber.cs",
+              "DocumentMoniker": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Domain\\ValueObjects\\PhoneNumber.cs",
+              "RelativeDocumentMoniker": "NotificationService.Domain\\ValueObjects\\PhoneNumber.cs",
+              "ToolTip": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Domain\\ValueObjects\\PhoneNumber.cs",
+              "RelativeToolTip": "NotificationService.Domain\\ValueObjects\\PhoneNumber.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T08:15:13.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SmsNotificationSender.cs",
+              "DocumentMoniker": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Infrastructure\\Senders\\SmsNotificationSender.cs",
+              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Senders\\SmsNotificationSender.cs",
+              "ToolTip": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Infrastructure\\Senders\\SmsNotificationSender.cs",
+              "RelativeToolTip": "NotificationService.Infrastructure\\Senders\\SmsNotificationSender.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T08:15:04.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260509081240_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Infrastructure\\Migrations\\20260509081240_InitialMigration.cs",
+              "RelativeDocumentMoniker": "NotificationService.Infrastructure\\Migrations\\20260509081240_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Infrastructure\\Migrations\\20260509081240_InitialMigration.cs",
+              "RelativeToolTip": "NotificationService.Infrastructure\\Migrations\\20260509081240_InitialMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T08:12:40.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "NotificationService.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Api\\appsettings.json",
+              "RelativeToolTip": "NotificationService.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-09T08:11:26.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Api\\Program.cs",
+              "RelativeDocumentMoniker": "NotificationService.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Api\\Program.cs",
+              "RelativeToolTip": "NotificationService.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T08:09:12.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Api\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "NotificationService.Api\\Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Api\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "NotificationService.Api\\Controllers\\NotificationController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T08:08:09.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "NotificationService.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\lfodor\\OneDrive - ENDAVA\\Documents\\DissertationRepo\\svc-notification\\NotificationService.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "NotificationService.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-09T08:07:49.103Z",
+              "EditorCaption": ""
             }
           ]
         }

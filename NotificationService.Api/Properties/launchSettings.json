@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "http": {
+    "NotificationService.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
